@@ -55,6 +55,7 @@ WSGI_APPLICATION = "config.wsgi.application"
 # APPS
 # ------------------------------------------------------------------------------
 DJANGO_APPS = [
+    
     "django.contrib.gis",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -76,6 +77,7 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     "interpolationgtd.users",
+    "interpolationgtd.spatials",
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps

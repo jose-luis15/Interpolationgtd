@@ -1,4 +1,4 @@
-ARG PYTHON_VERSION=andrejreznik/python-gdal:stable
+ARG PYTHON_VERSION=andrejreznik/python-gdal:py3.8.2-gdal3.0.4
 # FROM andrejreznik/python-gdal:stable as python
 # define an alias for the specfic python version used in this file.
 FROM ${PYTHON_VERSION} as python
@@ -66,7 +66,6 @@ COPY ./compose/local/django/start /start
 RUN sed -i 's/\r$//g' /start
 RUN chmod +x /start
 
-# Update C env vars so compiler can find gdal
 # Update C env vars so compiler can find gdal
 ENV CPLUS_INCLUDE_PATH=/usr/include/gdal
 ENV C_INCLUDE_PATH=/usr/include/gdal
